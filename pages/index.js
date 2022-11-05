@@ -1,12 +1,18 @@
 import React from 'react'
+import Center from '../components/home/Center'
 import Footer from '../components/home/Footer'
 import Navbar from '../components/home/Navbar'
 
 
 const index = () => {
   return (
-    <div className='bg-black h-screen pt-10'>
+
+    <div>
       <Navbar/>
+      <div className='h-screen'>
+
+      <Center/>
+      </div>
       <Footer/>
     </div>
   )
