@@ -7,7 +7,7 @@ const Form = () => {
     const [Category, setCategory] = useState('')
     const [SubCategory, setSubCategory] = useState('')
     const [CompanyName, setCompanyName] = useState('')
-    const [CompanyLocation, setCompanyLocation] = useState('Banglore')
+    const [CompanyLocation, setCompanyLocation] = useState('')
     // console.log(field[Category][SubCategory][CompanyName])
 
     // console.log(field)
@@ -54,12 +54,12 @@ const Form = () => {
                         )
                     }
                 </select>}
-                {field[Category] && field[Category][SubCategory] && field[Category][SubCategory][CompanyName]&& <select name="category" id="" className='px-4 py-2 border border-gray-300 rounded-md shadow-sm w-4/5 my-2 '>
+                {field[Category] && field[Category][SubCategory] && field[Category][SubCategory][CompanyName] && <select name="category" id="" className='px-4 py-2 border border-gray-300 rounded-md shadow-sm w-4/5 my-2 ' onChange={(e) => { setCompanyLocation(e.target.value); console.log(CompanyLocation) }}>
                     <option value="category" defaultChecked > Select Companies Location </option>
                     {
                         Object.keys(field[Category][SubCategory][CompanyName]).map((category, index) => {
                             return (
-                                <option value={category} key={index}>{field[Category][SubCategory][CompanyName][index]}</option>
+                                <option value={field[Category][SubCategory][CompanyName][index]} key={index}>{field[Category][SubCategory][CompanyName][index]}</option>
                             )
                         }
                         )
