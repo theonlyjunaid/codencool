@@ -6,7 +6,7 @@ import Navbar from '../components/home/Navbar'
 
 const index = () => {
   return (
-    <div className='bg-gray-400 pt-10 h-screen'>
+    <div className='bg-gray-400 pt-10'>
       <Navbar/>
   
       <Center/>
