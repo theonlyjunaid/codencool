@@ -19,7 +19,6 @@ const [email, setEmail] = useState('')
   const [Portfolio, setPortfolio] = useState('')
 
   const handleChange = async (e) => {
-    console.log(CompanyLocation)
     const { name, value } = e.target
     if (name === "name") {
       setName(value)
@@ -39,6 +38,7 @@ const [email, setEmail] = useState('')
   }
 
   const handleSubmit = async (e) => {
+
     e.preventDefault()
     const data = { 
       name,
@@ -59,7 +59,10 @@ const [email, setEmail] = useState('')
       body: JSON.stringify(data)
     })
     const json = await res.json()
-// console.log(json)
+
+console.log(data)
+
+
 
 
 
@@ -116,7 +119,7 @@ const [email, setEmail] = useState('')
       <Navbar heading='Edit Details' />
       <div className="max-w-s w-8/12 m-auto pt-12">
 
-        <form className="bg-white shadow-md formshadow rounded-2xl px-8 pt-6 pb-8 mb-4">
+        <form className="bg-white shadow-md formshadow rounded-2xl px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
 
           <div className="mb-4">
             <label
@@ -281,7 +284,7 @@ value={Portfolio}
             <button
 
               className="bg-pink-500 hover:bg-purple-500 rounded-xl centerbtn text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
-              type="button"
+              type="submit"
 
             >
               Submit Details
