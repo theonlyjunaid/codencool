@@ -5,7 +5,7 @@ import Navbar from '../components/home/Navbar'
 
 const index = () => {
   return (
-    <div>
+    <div className='bg-black h-screen pt-10'>
       <Navbar/>
       <Footer/>
     </div>
