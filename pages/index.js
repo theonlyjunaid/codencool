@@ -7,6 +7,7 @@ const index = () => {
   return (
     <div>
       <Navbar/>
+      <div className='text-blue-400'>holA</div>
       <Footer/>
     </div>
   )
