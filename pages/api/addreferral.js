@@ -30,6 +30,7 @@ const handler = async (req, res) => {
 
                 });
                 const newReferral = await referral.save();
+                console.log(newReferral);
                 res.status(200).json({success:true,message:"Referral added successfully"});
             } catch (error) {
                 res.status(400).json({success:false, message: error.message });
