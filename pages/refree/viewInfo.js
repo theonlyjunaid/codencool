@@ -1,23 +1,22 @@
 import { setRevalidateHeaders } from "next/dist/server/send-payload";
 import { useState, useEffect } from "react"
+import mongoose from "mongoose";
+import Referral from '../../model/Referral'
+import Navbar from "../../components/home/Navbar";
 
-const View =()=>{
+const View =({products})=>{
+  console.log(products);
     return(
       <>
+      <Navbar/>
         <div className="text-gray-600 body-font relative">
           <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
             <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-              <iframe
+              <img
                 width="100%"
                 height="100%"
                 className="absolute inset-0"
-                frameBorder={0}
-                title="map"
-                marginHeight={0}
-                marginWidth={0}
-                scrolling="no"
-
-                style={{ filter: "grayscale(0.5) contrast(1) opacity(0.5)" }}
+                src="https://jofibo.com/images/templates/designer_resume_template_thumbnail.png"
               />
             </div>
 
@@ -27,20 +26,20 @@ const View =()=>{
                   Referral Seeker Preference
                 </h2>
                 <p className="leading-relaxed mb-5 text-gray-600">
-                  Company Name : #
+                  Company Name : {products[0].companyName}
                 </p>
                 <p className="leading-relaxed mb-5 text-gray-600">
-                  Role of Interest : #
+                  Role of Interest : {products[0].subCategory}
                 </p>
                 <p className="leading-relaxed mb-5 text-gray-600">
-                  Preferred Location : #
+                  Preferred Location : {products[0].companyLocation}
                 </p>
                 <h3 className="text-gray-900 text-lg mb-1 font-medium title-font">Socials</h3>
                 <p className="leading-relaxed mb-5 text-gray-600">
-                  Linkedin : #
+                  Linkedin : {products[0].linkedin}
                 </p>
                 <p className="leading-relaxed mb-5 text-gray-600">
-                  Github : #
+                  Github : {products[0].github}
                 </p>
               </div>
             
@@ -86,3 +85,17 @@ const View =()=>{
     )
 }
 export default View
+
+
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+      await mongoose.connect(process.env.MONGODB_URI);
+
+  }
+  const id = context.query.id
+  let products = await Referral.find({_id:id}).lean();
+
+  return {
+      props: { products: JSON.parse(JSON.stringify(products)) },
+  }
+}
