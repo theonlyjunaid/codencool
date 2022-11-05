@@ -1,13 +1,16 @@
 import React from 'react'
+import Center from '../components/home/Center'
 import Footer from '../components/home/Footer'
 import Navbar from '../components/home/Navbar'
 
 
 const index = () => {
   return (
-    <div>
+    <div className='bg-gray-400 pt-10 h-screen'>
       <Navbar/>
-      <div className='text-blue-400'>Footer made by Ashish</div>
+  
+      <Center/>
+
       <Footer/>
     </div>
   )
