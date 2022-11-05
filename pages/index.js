@@ -6,12 +6,10 @@ import Navbar from '../components/home/Navbar'
 
 const index = () => {
   return (
-    <div>
-      {/* <Navbar/> */}
-      <div className='h-screen'>
-
+    <div className='bg-gray-400 pt-10 h-screen'>
+      <Navbar/>
+   
       <Center/>
-      </div>
       <Footer/>
     </div>
   )

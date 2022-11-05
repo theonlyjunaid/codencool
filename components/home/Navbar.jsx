@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
+    <div className=''>
 
       <div className='flex justify-between bg-white w-3/4 m-auto rounded-2xl'>
         <span className='text-3xl p-3 m-auto'>ETHIndia</span>
