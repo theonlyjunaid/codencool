@@ -2,12 +2,12 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className=''>
+    <div  className=''>
 
       <div className='flex justify-between bg-white w-3/4 m-auto rounded-2xl'>
-        <span className='text-3xl p-3 m-auto'>ETHIndia</span>
+        <span className='text-3xl p-3 m-auto'>Referral</span>
         <span className='flex w-3/4 justify-evenly ml-40 my-4'>
-          <span className='text-2xl font-light p-3'>About</span>
+          <span className='text-2xl font-light p-3 border-t-4 border-pink-500'>About</span>
           <span className='text-2xl font-light p-3'>Speakers</span>
           <span className='text-2xl font-light p-3'>Partners</span>
           <span className='text-2xl font-light p-3'>FAQs</span>
@@ -16,7 +16,6 @@ const Navbar = () => {
         </span>
       </div>
     </div>
-
   )
 }
 
