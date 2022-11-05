@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({heading}) => {
   return (
     <div  className=''>
 
       <div className='flex justify-between bg-white w-3/4 m-auto rounded-2xl'>
-        <span className='text-3xl p-3 m-auto'>Referral</span>
+        <span className='text-3xl p-3 m-auto'>{heading}</span>
         <span className='flex w-3/4 justify-evenly ml-40 my-4'>
           <span className='text-2xl font-light p-3 border-t-4 border-pink-500'>About</span>
           <span className='text-2xl font-light p-3'>Speakers</span>
@@ -17,6 +17,10 @@ const Navbar = () => {
       </div>
     </div>
   )
+}
+
+Navbar.defaultProps = {
+  heading: 'Referral'
 }
 
 export default Navbar
