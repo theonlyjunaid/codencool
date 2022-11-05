@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Info() {
+  
+  
 const [name, setName] = useState('')
 const [email, setEmail] = useState('')
   const [Category, setCategory] = useState('')
@@ -57,7 +59,7 @@ const [email, setEmail] = useState('')
       body: JSON.stringify(data)
     })
     const json = await res.json()
-console.log(json)
+// console.log(json)
 
 
 
