@@ -4,15 +4,15 @@ const Center = () => {
   return (
     <div className='w-full   flex justify-center items-center relative h-screen '>
         <div className='flex  gap-10 '>
-              <div className="w-60 h-14 text-xl bg-black cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
+              <div className="w-60 h-14 text-xl bg-green-500 cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
               >
 
-Give Refrale
+    Give Referral
             </div>
-              <div className="w-60 h-14 bg-black text-xl  cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
+              <div className="w-60 h-14 bg-orange-400 text-xl  cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
               >
 
-need Refrale
+    Need Referral
             </div>
         </div>
     </div>
