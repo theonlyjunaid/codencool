@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 .centerbtn{
-    box-shadow: 5px 5px  #000000;
+    box-shadow: -5px 5px  #000000;
+}
+.formshadow{
+    box-shadow: -8px 8px #000000;
+}
+.navbarshadow{
+    box-shadow: 0px 8px 0px -1px #000000;
 }

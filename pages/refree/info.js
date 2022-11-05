@@ -5,7 +5,7 @@ function info() {
     <div className="bg-gray-200 pt-10 h-screen">
         <Navbar heading='Edit Details'/>
         <div className="max-w-s w-8/12 m-auto pt-12">
-            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form className="bg-white shadow-md rounded-2xl formshadow px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                 <label
                     className="block text-gray-700 text-sm font-bold mb-2"
@@ -65,7 +65,7 @@ function info() {
                 
                 <div className="flex items-center justify-between">
                 <button
-                    className="bg-pink-500 hover:bg-blue-700 rounded-2xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+                    className="bg-pink-500 hover:bg-blue-700 rounded-xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
                     type="button"
                 >
                     Save Details

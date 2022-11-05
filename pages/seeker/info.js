@@ -13,7 +13,7 @@ function Info() {
     <div className="bg-gray-200 pt-10 ">
       <Navbar heading='Edit Details' />
       <div className="max-w-s w-8/12 m-auto pt-12">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form className="bg-white shadow-md formshadow rounded-2xl px-8 pt-6 pb-8 mb-4">
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -48,7 +48,7 @@ function Info() {
           >
             Select Your Preference
           </label>
-          <select name="category" id="lol" className='shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4' onChange={(e) => { setCategory(e.target.value); console.log(Category) }}>
+          <select name="category" id="lol" className='shadow  border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4' onChange={(e) => { setCategory(e.target.value); console.log(Category) }}>
             <option value="Select Your Field of Interest" defaultChecked>Select Your Field of Interest</option>
             {
               Object.keys(field).map((category, index) => {
@@ -157,13 +157,13 @@ function Info() {
 
           <div className="flex items-center justify-between">
             <button
-              className="bg-pink-500 hover:bg-blue-700 rounded-2xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+              className="bg-pink-500 hover:bg-purple-500 rounded-xl centerbtn text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
               type="button"
             >
               Submit Details
             </button>
             <a
-              className="inline-block align-baseline font-bold text-sm text-pink-500 hover:text-blue-800"
+              className="inline-block align-baseline font-bold text-sm text-pink-500 hover:text-purple-800"
               href="#"
             >
               Cancel
