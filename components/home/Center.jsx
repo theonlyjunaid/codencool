@@ -6,10 +6,17 @@ const Center = () => {
     <div className='w-full   flex justify-center items-center relative h-screen '>
       
         <div className='flex  gap-10 '>
-        <Link href="/refree/info"><div className="w-60 h-14 text-xl bg-black cursor-pointer centerbtn py-3 text-center rounded-xl text-white ">Give Refrale</div></Link>
-        <Link href="/seeker/info"><div className="w-60 h-14 bg-black text-xl  cursor-pointer centerbtn py-3 text-center rounded-xl text-white ">
-need Refrale
-        </div></Link>
+              <Link href="/refree/info"><div className="w-60 h-14 text-xl bg-green-500 cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
+              >
+
+    Give Referral
+            </div></Link>
+              <Link href="/seeker/info"><div className="w-60 h-14 bg-orange-400 text-xl  cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
+              >
+
+    Need Referral
+            </div></Link>
+
         </div>
     </div>
   )
