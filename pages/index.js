@@ -8,8 +8,9 @@ const index = () => {
   return (
     <div className='bg-gray-400 pt-10 h-screen'>
       <Navbar/>
-   
+  
       <Center/>
+
       <Footer/>
     </div>
   )
