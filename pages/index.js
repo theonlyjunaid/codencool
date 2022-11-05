@@ -6,9 +6,8 @@ import Navbar from '../components/home/Navbar'
 
 const index = () => {
   return (
-
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className='h-screen'>
 
       <Center/>
