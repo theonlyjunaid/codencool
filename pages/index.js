@@ -2,6 +2,7 @@ import React from 'react'
 import Center from '../components/home/Center'
 import Footer from '../components/home/Footer'
 import Navbar from '../components/home/Navbar'
+import About from '../components/home/About'
 
 
 const index = () => {
@@ -10,6 +11,8 @@ const index = () => {
       <Navbar/>
   
       <Center/>
+
+      <About/>
 
       <Footer/>
     </div>
