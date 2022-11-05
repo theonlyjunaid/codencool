@@ -113,11 +113,9 @@ console.log(json)
       />
       <Navbar heading='Edit Details' />
       <div className="max-w-s w-8/12 m-auto pt-12">
-<<<<<<< HEAD
+
         <form className="bg-white shadow-md formshadow rounded-2xl px-8 pt-6 pb-8 mb-4">
-=======
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit} >
->>>>>>> b44dc54dc746baf93c80746de218972776db8142
+
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -279,13 +277,10 @@ value={Portfolio}
 
           <div className="flex items-center justify-between">
             <button
-<<<<<<< HEAD
+
               className="bg-pink-500 hover:bg-purple-500 rounded-xl centerbtn text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
               type="button"
-=======
-              className="bg-pink-500 hover:bg-blue-700 rounded-2xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
-              type="submit"
->>>>>>> b44dc54dc746baf93c80746de218972776db8142
+
             >
               Submit Details
             </button>
