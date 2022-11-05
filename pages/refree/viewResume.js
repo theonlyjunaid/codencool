@@ -18,7 +18,8 @@ function viewResume() {
             <Navbar heading="View Resumes"/>
         </div>
             <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
+                <h1 className="text-5xl text-center mt-10 text-black">Resumes</h1>
+        <div className="container px-5 py-8 mx-auto">
             {value && <div className="flex flex-wrap -m-4">
             {Object.keys(value).map((index) => { 
                 console.log(index)

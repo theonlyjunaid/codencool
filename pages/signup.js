@@ -60,9 +60,11 @@ function login() {
                     </div>
                     
                     <div className="p-2 w-full">
+                    <Link href='/refree/viewResume'>
                         <button className="flex mx-auto text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                         Register
                         </button>
+                    </Link>
                     </div>
                             <div className="p-2 w-full pt-4 mt-2 border-t border-gray-200 text-center flex gap-2 justify-center">
                                 Already have an account? <Link href="/login"><div className="text-pink-500">Log in</div></Link>
