@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import connectDB from "../../middleware/mongoose";
 import Referral from "../../model/Referral";
+
 const handler = async (req, res) => {
     if (req.method === 'POST') {
         console.log(req.body);
