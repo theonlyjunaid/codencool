@@ -6,6 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function Info() {
+  const data = async () => {
+    
+  }
 const [name, setName] = useState('')
 const [email, setEmail] = useState('')
   const [Category, setCategory] = useState('')
