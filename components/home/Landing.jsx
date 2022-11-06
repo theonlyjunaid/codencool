@@ -15,11 +15,11 @@ function landing() {
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum aut aliquid voluptatum neque delectus accusantium perspiciatis ipsam natus ad sequi.
             </p>
             <div>
-                <Link href="/refree/signup"><button className="w-60 h-14 text-xl bg-green-500 cursor-pointer centerbtn py-3 text-center rounded-xl text-white mx-6"
+                <Link href="/refree/"><button className="w-60 h-14 text-xl bg-green-500 cursor-pointer centerbtn py-3 text-center rounded-xl text-white mx-6"
                 >
                 Give Referral
                 </button></Link>
-                <Link href="/seeker/signup"><button className="w-60 h-14 bg-orange-400 text-xl  cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
+                <Link href="/seeker/"><button className="w-60 h-14 bg-orange-400 text-xl  cursor-pointer centerbtn py-3 text-center rounded-xl text-white "
                 >
                 Need Referral
                 </button></Link>
