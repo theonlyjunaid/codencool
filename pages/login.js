@@ -34,7 +34,6 @@ function login() {
     setEmail("")
     setPassword("")
     if (json.success) {
-
       localStorage.setItem('myuser', JSON.stringify({ email: json.email,role:json.role  }));
       toast.success('Login Success', {
         position: "top-left",
@@ -120,7 +119,7 @@ function login() {
               className="bg-pink-500 hover:bg-blue-700 rounded-xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
               type="submit"
             >
-              Sign Up
+Log in
             </button>
             <a
               className="inline-block align-baseline font-bold text-sm text-pink-500 hover:text-blue-800"
@@ -131,12 +130,12 @@ function login() {
           </div>
           <div>
             <p className="text-center text-gray-500 text-lg">
-              Allready have an account?{' '}
+              Don't have an account?{' '}
               <Link
                 className="text-pink-500 hover:text-pink-800"
                 href="#"
               >
-                Sign In
+                Sign Up
               </Link>
             </p>
           </div>
