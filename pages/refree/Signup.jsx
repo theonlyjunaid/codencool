@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react'
 import Link from "next/link";
-function signup() {
+function Signup() {
 
 
     const [name, setName] = useState('')
@@ -272,4 +272,4 @@ Allready have an account?{' '}
   )
 }
 
-export default signup
+export default Signup
