@@ -1,20 +1,34 @@
-import React from 'react'
-import Center from '../components/home/Center'
+import React,{useEffect,useRouter} from 'react'
 import Footer from '../components/home/Footer'
-import Navbar from '../components/home/Navbar'
 import About from '../components/home/About'
+import Partners from '../components/home/Partners'
 import Landing from '../components/home/Landing'
 import Faq from '../components/home/Faq'
+
 import Second from '../components/home/Second'
 
-const index = () => {
+import Router from "next/router";
+
+
+const index = ({user}) => {
+  const router = Router;
+
+
+
+
+
   return (
+
     <div className="">
       <Navbar/>
       <Landing/>
       <About/>
+      
       <Second />
+       <Partners/>
+
       <Faq/>
+
       <Footer/>
     </div>
   )

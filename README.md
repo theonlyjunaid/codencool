@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project Link: 
+    https://codencool.vercel.app/
+Project Name: 
+    ReferVilla
+Problem Solved: 
+    A fresher always look for referrals to get job in corporate, and for that they reach to professionals working in corporate via linkedin.
+    It is difficult for both the freshie and professional. Professional's inbox contains a bulk of messages, which is next to impossible for them to see all the messages.
+    Also, it take a huge amount of time, for freshie to find professionals from different company and then contact each of them. And even after sending message, the chances of getting shortlisted are very less.
 
-## Getting Started
+Our Solution:
+    We have created a platform, ReferVilla, where a professional will register as a refree ( who will give referral ) and freshie will register to get referral. 
+    A freshie will have option to add his / her resume along with some details of them, via which our platform will show their resumes to the professionals.
 
-First, run the development server:
+    Registered Professionals will have access to their dashboard where they will see the resumes of candidates and will shortlist any candidate, they found good.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+What will be our Source of Income?
+    On successfull referral, we will take 15% of the Joining Bonus from the freshie.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Why Professionals will come to us?
+    On viewing 10 resumes each day, we will give professional a ReferBit and on mainting consistency for 30 days, additional 30 ReferBit will be provided, which they can redeem on our platform for real money.
+    On successful referral, we will give 40% of the amount taken from freshie to Professional.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+How our site works?
+    On Opening ReferVilla, there is a landing page containing some information about the company. And you will have option to register as a refree or seeker ( to give referral / need referral) 
+    On Registering, both refree and seeker can see their own dashboard, where refree will be able to see resumes of different seekers. And seekers can see how many Professionals have seen their resume.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Challenges faced:
+    CyberSecurity: To prevent Professional's data is a huge concern, so that hackers did not get private information about them or their company. We have planned to implement 2 factor authentication, CSP ( content security policy ) and will use qpdf as pdf encryption tool to save resumes of different candidates from hacking.
