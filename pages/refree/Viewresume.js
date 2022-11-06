@@ -5,7 +5,7 @@ import Link from 'next/link'
 // import { useRouter } from 'next/router'
 
 
-function viewResume({products,user}) {
+function Viewresume({products,user}) {
 
     const items = products?.filter(item => item.companyName.indexOf(user?.role) !== -1);
   return (
@@ -47,7 +47,7 @@ function viewResume({products,user}) {
   )
 }
 
-export default viewResume
+export default Viewresume
 
 
 
