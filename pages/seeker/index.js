@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Seekertop from '../../components/Seekertop'
-import Info from './info'
+import Info from './Info'
 
 const index = () => {
     const [show, setShow] = useState('Info')
