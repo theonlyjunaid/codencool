@@ -34,6 +34,7 @@ function login() {
     setEmail("")
     setPassword("")
     if (json.success) {
+
       localStorage.setItem('myuser', JSON.stringify({ email: json.email,role:json.role  }));
       toast.success('Login Success', {
         position: "top-left",
@@ -79,7 +80,7 @@ function login() {
       />
       <div className="max-w-s w-2/5 m-auto pt-12">
         <form className="bg-white shadow-md rounded-2xl formshadow px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
-        
+
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
