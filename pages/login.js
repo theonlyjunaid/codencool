@@ -34,7 +34,8 @@ function login() {
     setEmail("")
     setPassword("")
     if (json.success) {
-      localStorage.setItem('myuser', JSON.stringify({ email: json.email, role: json.role }));
+
+      localStorage.setItem('myuser', JSON.stringify({ email: json.email,role:json.role  }));
       toast.success('Login Success', {
         position: "top-left",
         autoClose: 5000,
