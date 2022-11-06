@@ -1,14 +1,13 @@
 // import Navbar from "../../components/home/Navbar"
 import {useEffect, useState} from "react"
 import Link from 'next/link'
-import mongoose from "mongoose";
-import Referral from '../../model/Referral'
+
 // import { useRouter } from 'next/router'
 
 
 function viewResume({products,user}) {
 
-    const items = products.filter(item => item.companyName.indexOf(user?.role) !== -1);
+    const items = products?.filter(item => item.companyName.indexOf(user?.role) !== -1);
   return (
     <div className="bg-gray-200">
         {/* <div className="pt-10">
@@ -50,16 +49,5 @@ function viewResume({products,user}) {
 
 export default viewResume
 
-export async function getServerSideProps(context) {
-    if (!mongoose.connections[0].readyState) {
-        await mongoose.connect(process.env.MONGODB_URI);
 
-    }
-let products = await Referral.find({}).lean();
-
-
-    return {
-        props: { products: JSON.parse(JSON.stringify(products)) },
-    }
-}
 
