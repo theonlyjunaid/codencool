@@ -10,7 +10,6 @@ const index = () => {
   return (
     <div className="">
       <Navbar/>
-
       <Landing/>
       <About/>
       <Faq/>
