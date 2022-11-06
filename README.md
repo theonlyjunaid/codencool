@@ -1,11 +1,14 @@
 Project Link: 
     https://codencool.vercel.app/
+
 Project Name: 
     ReferVilla
+
 Problem Solved: 
     A fresher always look for referrals to get job in corporate, and for that they reach to professionals working in corporate via linkedin.
     It is difficult for both the freshie and professional. Professional's inbox contains a bulk of messages, which is next to impossible for them to see all the messages.
     Also, it take a huge amount of time, for freshie to find professionals from different company and then contact each of them. And even after sending message, the chances of getting shortlisted are very less.
+
 
 Our Solution:
     We have created a platform, ReferVilla, where a professional will register as a refree ( who will give referral ) and freshie will register to get referral. 
@@ -29,3 +32,10 @@ How our site works?
 
 Challenges faced:
     CyberSecurity: To prevent Professional's data is a huge concern, so that hackers did not get private information about them or their company. We have planned to implement 2 factor authentication, CSP ( content security policy ) and will use qpdf as pdf encryption tool to save resumes of different candidates from hacking.
+
+
+Some Glimpses:-
+
+<img width="1439" alt="Screenshot 2022-11-06 at 12 07 22 PM" src="https://user-images.githubusercontent.com/92316166/200157927-16ab9608-dce9-4551-bdf1-b6c7cea1b156.png">
+<img width="1439" alt="Screenshot 2022-11-06 at 12 07 32 PM" src="https://user-images.githubusercontent.com/92316166/200157939-57fa09d6-e25a-4a6a-b53c-ded9822b26d9.png">
+<img width="1439" alt="Screenshot 2022-11-06 at 12 07 40 PM" src="https://user-images.githubusercontent.com/92316166/200157943-b943c2f5-6636-4ee4-af9c-3c3ceec38f48.png">
