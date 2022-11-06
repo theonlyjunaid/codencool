@@ -3,19 +3,22 @@ import Refreetop from '../../components/Refreetop'
 import Viewresume from './Viewresume'
 import mongoose from "mongoose";
 import Referral from '../../model/Referral'
+import Signup from './Signup';
+
 
 const index = ({ products, user }) => {
-    const [show, setShow] = useState('viewrefrels')
+    const [show, setShow] = useState('viewprofile')
   return (
     <div>
         <Refreetop/>
         <div>
             <ul className='flex gap-10 w-full justify-center text-xl'>
-                {/* <li onClick={()=>setShow('viewprofile')}>View Profile</li> */}
+                <li onClick={()=>setShow('viewprofile')}>View details</li>
                 <li onClick={()=>setShow('viewrefrels')}>View Refrrele request</li>
             </ul>
         </div>
           {show === 'viewrefrels' && <Viewresume products={products} user={user} />}
+          {show ==='viewprofile'&&<Signup/>}
           
 
     </div>
