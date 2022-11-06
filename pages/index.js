@@ -3,6 +3,7 @@ import Center from '../components/home/Center'
 import Footer from '../components/home/Footer'
 import Navbar from '../components/home/Navbar'
 import About from '../components/home/About'
+import Partners from '../components/home/partner'
 
 
 const index = () => {
@@ -14,6 +15,8 @@ const index = () => {
 
       <About/>
 
+      <Partners/>
+      
       <Footer/>
     </div>
   )
