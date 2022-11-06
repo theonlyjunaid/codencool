@@ -1,4 +1,4 @@
-import Navbar from "../../components/home/Navbar"
+// import Navbar from "../../components/home/Navbar"
 import React, { useState } from 'react'
 import { field } from '../../seekinfo'
 import { ToastContainer, toast } from 'react-toastify';
@@ -116,7 +116,7 @@ console.log(data)
         pauseOnHover
         theme="light"
       />
-      <Navbar heading='Edit Details' />
+      {/* <Navbar heading='Edit Details' /> */}
       <div className="max-w-s w-8/12 m-auto pt-12">
 
         <form className="bg-white shadow-md formshadow rounded-2xl px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
