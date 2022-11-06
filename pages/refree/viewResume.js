@@ -59,7 +59,7 @@ let products = await Referral.find({}).lean();
 
 
     return {
-        props: { products: JSON.parse(JSON.stringify(products)),"myuser":myuser  },
+        props: { products: JSON.parse(JSON.stringify(products)) },
     }
 }
 
