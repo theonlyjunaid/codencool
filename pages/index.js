@@ -20,7 +20,6 @@ const index = ({user}) => {
   return (
 
     <div className="">
-      <Navbar/>
       <Landing/>
       <About/>
       
