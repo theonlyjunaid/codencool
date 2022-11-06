@@ -170,7 +170,7 @@ function signup() {
                   >
                       Select Your Designation Details
                   </label>
-                  <select name="category" id="lol" className='shadow  border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4' onChange={(e) => { setCategory(e.target.value); console.log(Category); setRole(e.target.value) }}>
+                  <select name="category" id="lol" className='shadow  border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4' onChange={(e) => { setCategory(e.target.value); console.log(Category);  }}>
                       <option value="Select Your Field of Interest" defaultChecked>Select Your Field of Interest</option>
                       {
                           Object.keys(field).map((category, index) => {
@@ -184,7 +184,7 @@ function signup() {
                       }
                   </select>
 
-                  {field[Category] && <select name="category" id="" className='shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4 ' onChange={(e) => { setSubCategory(e.target.value); console.log(SubCategory);setRole(e.target.value) }}>
+                  {field[Category] && <select name="category" id="" className='shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4 ' onChange={(e) => { setSubCategory(e.target.value); console.log(SubCategory); }}>
                       <option value="category" defaultChecked > Select Your Role of interest</option>
                       {
                           Object.keys(field[Category]).map((category, index) => {
@@ -195,7 +195,7 @@ function signup() {
                           )
                       }
                   </select>}
-                  {field[Category] && field[Category][SubCategory] && <select name="category" id="" className='shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4 ' onChange={(e) => { setCompanyName(e.target.value); console.log(CompanyName) }}>
+                  {field[Category] && field[Category][SubCategory] && <select name="category" id="" className='shadow  border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-4 ' onChange={(e) => { setCompanyName(e.target.value); console.log(CompanyName); setRole(e.target.value) }}>
                       <option value="category" defaultChecked > Select Company of Interest</option>
                       {
                           Object.keys(field[Category][SubCategory]).map((category, index) => {
