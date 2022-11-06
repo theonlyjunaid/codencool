@@ -1,67 +1,153 @@
 import Navbar from "../components/home/Navbar"
 import Footer from "../components/home/Footer"
 import Link from "next/link"
+import { useState, useEffect } from "react"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Router from "next/router";
 
 function login() {
+  const router = Router;
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const handleChange = async (e) => {
+    const { name, value } = e.target
+    if (name === "email") {
+      setEmail(value)
+    }
+    if (name === "password") {
+      setPassword(value)
+    }
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const data = { email, password }
+    const res = await fetch(`/api/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    const json = await res.json()
+    console.log(json)
+    setEmail("")
+    setPassword("")
+    if (json.success) {
+
+      localStorage.setItem('myuser', JSON.stringify({ email: json.email,role:json.role  }));
+      toast.success('Login Success', {
+        position: "top-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      setTimeout(() => {
+        router.push('/')
+      }, 1500);
+    } else {
+      toast.error(json.error, {
+        position: "top-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  }
+
   return (
-    <div className='bg-gray-200 pt-10 min-h-screen'>
-      <Navbar heading="Login"/>
-      <section className="text-gray-600 body-font relative w-3/6 m-auto mb-10">
-        <div className="container px-2 py-24 mx-auto bg-gray-100 rounded-xl mt-10">
-          <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-3xl font-medium title-font mb-4 text-gray-900">
-              Login
-            </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ab temporibus dolor qui suscipit eum.
+    <div className="bg-gray-200 pt-10 h-screen">
+      <Navbar heading='Edit Details' />
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <div className="max-w-s w-2/5 m-auto pt-12">
+        <form className="bg-white shadow-md rounded-2xl formshadow px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="email@gmail.com"
+            />
+          </div>
+          <div className="mb-4">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <input
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+              placeholder="email@gmail.com"
+            />
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              className="bg-pink-500 hover:bg-blue-700 rounded-xl text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Sign Up
+            </button>
+            <a
+              className="inline-block align-baseline font-bold text-sm text-pink-500 hover:text-blue-800"
+              href="#"
+            >
+              Cancel
+            </a>
+          </div>
+          <div>
+            <p className="text-center text-gray-500 text-lg">
+              Allready have an account?{' '}
+              <Link
+                className="text-pink-500 hover:text-pink-800"
+                href="#"
+              >
+                Sign In
+              </Link>
             </p>
           </div>
-          <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <div className="flex flex-wrap -m-2">
-              <div className="p-2 w-full">
-                <div className="relative">
-                  <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full bg-white  rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div className="p-2 w-full">
-                <div className="relative">
-                  <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="email"
-                    name="email"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                  <a className="text-pink-500 mt-1">Forgot Password?</a>
-
-                </div>
-              </div>
-              
-              <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                  Login
-                </button>
-              </div>
-              <div className="p-2 w-full pt-4 mt-2 border-t border-gray-200 text-center flex gap-2 justify-center">
-                Don't have an account? <Link href="/signup"><div className="text-pink-500"> Sign Up</div></Link>
-                </div>
+        </form>
 
 
-            </div>
-          </div>
-        </div>
-      </section>
-<Footer/>
+
+        <p className="text-center text-gray-500 text-xs">
+          ©2022 Refree referal . All rights reserved.
+        </p>
+      </div>
     </div>
   )
 }
