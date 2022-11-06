@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Navbar = ({heading}) => {
   return (
-    <div  className='fixed w-[100%] top-2 z-20 opacity-90'>
+    <div  className='sticky top-2 z-20 opacity-90'>
       <div className='flex justify-between navbarshadow bg-green-100 w-4/5 m-auto rounded-2xl'>
         <div className='flex justify-center items-center'><Link href="/"><span className='text-3xl ml-8'>ReferVilla</span></Link></div>
         <span className='flex w-3/4 justify-evenly ml-40 my-4'>

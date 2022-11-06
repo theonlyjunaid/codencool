@@ -2,7 +2,7 @@ import Link from "next/link"
 
 function landing() {
   return (
-    <section id="about" className="top-0 text-black bg-yellow-50 h-[90vh] d-flex justify-center content-center body-font">
+    <section id="home" className="top-0 text-black bg-yellow-50 h-[90vh] flex justify-center content-center">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center pt-48">
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                 <img src="/bg.png" alt="###" />
