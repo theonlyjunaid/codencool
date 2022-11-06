@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Navbar = ({heading}) => {
+const Navbar = ({heading,user,logout}) => {
+  console.log(user)
   return (
 
     <div  className='sticky top-2 z-20 opacity-90'>
@@ -15,7 +16,7 @@ const Navbar = ({heading}) => {
           <Link href="#" className='p-3'><span className='text-2xl font-light'>Partners</span></Link>
           <Link href="#faq" className='p-3'><span className='text-2xl font-light'>FAQs</span></Link>
 
-          <Link href="/login"><button className='text-2xl p-3 bg-pink-500 rounded-2xl px-5 text-white'>Login</button></Link>   
+          {user?.email ? <button className='text-2xl p-3 bg-pink-500 rounded-2xl px-5 text-white' onClick={logout}>Log Out</button> :<Link href="/login"><button className='text-2xl p-3 bg-pink-500 rounded-2xl px-5 text-white' >Log in</button></Link>}   
         </span>
       </div>
     </div>

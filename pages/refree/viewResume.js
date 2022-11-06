@@ -1,4 +1,4 @@
-import Navbar from "../../components/home/Navbar"
+// import Navbar from "../../components/home/Navbar"
 import {useEffect, useState} from "react"
 import Link from 'next/link'
 import mongoose from "mongoose";
@@ -8,12 +8,12 @@ import Referral from '../../model/Referral'
 
 function viewResume({products,user}) {
 
-    const items = products.filter(item => item.companyName.indexOf(user.role) !== -1);
+    const items = products.filter(item => item.companyName.indexOf(user?.role) !== -1);
   return (
     <div className="bg-gray-200">
-        <div className="pt-10">
+        {/* <div className="pt-10">
             <Navbar heading="View Resumes"/>
-        </div>
+        </div> */}
             <section className="text-gray-600 body-font">
                 <h1 className="text-5xl text-center mt-10 text-black">Resumes</h1>
         <div className="container px-5 py-8 mx-auto">
@@ -59,7 +59,7 @@ let products = await Referral.find({}).lean();
 
 
     return {
-        props: { products: JSON.parse(JSON.stringify(products)),"myuser":myuser  },
+        props: { products: JSON.parse(JSON.stringify(products)) },
     }
 }
 

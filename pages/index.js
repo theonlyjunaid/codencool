@@ -1,19 +1,27 @@
-import React from 'react'
-import Center from '../components/home/Center'
+import React,{useEffect,useRouter} from 'react'
 import Footer from '../components/home/Footer'
-import Navbar from '../components/home/Navbar'
 import About from '../components/home/About'
 import Partners from '../components/home/Partners'
 import Landing from '../components/home/Landing'
 import Faq from '../components/home/Faq'
+import Router from "next/router";
 
-const index = () => {
+
+const index = ({user}) => {
+  const router = Router;
+
+
+
+
   return (
-    <div className="">
 
-      <Navbar/>
+    <div className="bg-orange-200 bg-[url('/main.svg')] bg-no-repeat bg-[length:100vw_110vh] bg-top">
+
+
+  
       <Landing/>
       <About/>
+
 
 
       <Partners/>

@@ -1,4 +1,4 @@
-import Navbar from "../../components/home/Navbar"
+// import Navbar from "../../components/home/Navbar"
 import { field } from '../../seekinfo'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -98,7 +98,7 @@ function signup() {
 
   return (
     <div className="bg-gray-200 pt-10 h-screen">
-        <Navbar heading='Edit Details'/>
+        {/* <Navbar heading='Edit Details'/> */}
           <ToastContainer
               position="bottom-left"
               autoClose={5000}
