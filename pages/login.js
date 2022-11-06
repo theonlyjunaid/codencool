@@ -133,7 +133,7 @@ Log in
               Don't have an account?{' '}
               <Link
                 className="text-pink-500 hover:text-pink-800"
-                href="#"
+                href="/"
               >
                 Sign Up
               </Link>
